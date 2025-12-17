@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+
+<body style="text-align:center; margin-top:120px; font-family:Arial;">
+
+<h2>Login</h2>
+
+<input id="u" placeholder="Username"><br><br>
+<input id="p" type="password" placeholder="Password"><br><br>
+
+<button type="button" onclick="login()">Login</button>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+function login() {
+    let u = document.getElementById("u").value;
+    let p = document.getElementById("p").value;
+
+    if (u === "kesarNagar" && p === "kesar2003nagar") {
+        document.body.innerHTML =
+            "<h1>LOGIN SUCCESS 🎉</h1>";
+    } else {
+        document.getElementById("error").innerText =
+            "Wrong username or password";
+    }
+}
+</script>
+
+</body>
+</html>
